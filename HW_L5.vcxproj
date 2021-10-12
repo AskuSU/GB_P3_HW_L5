@@ -144,6 +144,7 @@
     <ClCompile Include="MyLib.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ContainerExt.h" />
     <ClInclude Include="MyLib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
