@@ -35,6 +35,7 @@ namespace myLib
 	unsigned short getUserSelectedTask(unsigned short qtyTask)
 	{
 		unsigned short taskNumber = 0;
+		std::cin.clear();
 		do
 		{
 			std::cout << "Введите номер задачи от 1 до " << qtyTask << ":" << std::endl;

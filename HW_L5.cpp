@@ -2,6 +2,7 @@
 
 #include "MyLib.h"
 #include "ContainerExt.h"
+#include "TextCounter.h"
 
 
 void Task1()
@@ -27,9 +28,16 @@ void Task1()
 
 void Task2()
 {
-	std::cout << "Расчет ошибки преобразования сигнала Аналогово в Цифровой:" << std::endl << std::endl;
+	std::cout << "Сортировка предложений по длинне: " << std::endl << std::endl;
+	std::cout << "Вставьте свой текст: " << std::endl << std::endl;
 	
-	
+	std::cin.unsetf(std::ios::skipws);
+
+	std::string txt{ std::istream_iterator<char>{std::cin}, {} };
+	for (const auto& [qte, sentence] : lengthsOfSentences(txt))
+	{
+		std::cout << qte << " слов/а: " << sentence << std::endl;
+	}
 }
 
 
